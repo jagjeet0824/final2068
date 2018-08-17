@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+<div>
+  <h2>/* (1) Show the survey title */</h2>
+  
+  <p>
+    <small>By: /* (1) Show the surveyor */</small>
+  </p>
+  
+  <div>
+    <% let count = 1 %>
+    /* (3) Iterate through the survey questions */
+    <% for ( let question of answer.surveyQuestionList.questions ) { %>
+      <p><%= count %>)&nbsp;<%= question.question %>/* (1) Output the question */</p>
+    <p>
+      <strong><%= answer.answers[count - 1].answer %></strong>
+    </p>
+      <% count++ %>
+    <% } %>
+  </div>
+</div>

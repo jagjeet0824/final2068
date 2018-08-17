@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+<section>
+  <form action="/surveyQuestionLists" method="post">
+    <fieldset>
+      <legend>Survey Question List</legend>
+
+     <% survey.title %>
+
+      <% survey.surveyor%>
+
+      /* (6) Remove the redundancy */
+      <div class="form-group">
+        <label for="questions">Question 1</label>
+        <input type="text" class="form-control" id="questions" name="questions" placeholder="What?" required>
+      </div>
+
+      <div class="form-group">
+        <label for="questions">Question 2</label>
+        <input type="text" class="form-control" id="questions" name="questions" placeholder="What do you want?" required>
+      </div>
+
+      <div class="form-group">
+        <label for="questions">Question 3</label>
+        <input type="text" class="form-control" id="questions" name="questions" placeholder="WHAT DO YOU WANT?!?" required>
+      </div>
+      /* ending of "Remove the redundancy" */
+    </fieldset>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-lg">Create New Survey</button>
+    </div>
+  </form>
+</section>

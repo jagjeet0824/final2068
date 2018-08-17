@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<section>
+  <form action="/surveyAnswers" method="post">
+    <input type="hidden" name="surveyQuestionListID" value="<%= survey._id %>">
+    <fieldset>
+      <legend>Survey:<%= survey.title %> </legend>
+
+      <div class="form-group">
+        <label for="participant">Participant</label>
+        <input type="text" class="form-control" id="participant" name="participant" placeholder="Bobby B Baby" required>
+      </div>
+
+      <% let count = 1 %>
+      /* (3) Iterate through the survey questions */
+        <div class="form-group">
+          <label for="answers">Question <%= count %>: <%= question.question %></label>
+          <input type="text" class="form-control" id="answers" name="answers" placeholder="What?" required>
+          <% count++ %>
+        </div>
+      /* Don't forget to close */
+    </fieldset>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-lg">Submit Answer</button>
+    </div>
+  </form>
+</section>

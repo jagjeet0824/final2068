@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<p><a href="/surveyQuestionLists/new">New Survey</a></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Surveyor</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    /* (3) Iterate through all the surveys */
+      <tr>
+        <td>/* (1) Show the survey title */</td>
+        <td>/* (1) Show the surveyor */</td>
+        <td>
+          <a href="/surveyAnswers/new/answer /<%= surveyQuestionList[i]._id %>/">Answer</a>
+          |
+          <a href="/surveyQuestionLists/show /<%= surveyQuestionList[i]._id %>/">Show</a>
+          |
+          <a href="/surveyQuestionLists/edit /<%= surveyQuestionList[i]._id %>/">Edit</a>
+          |
+          <a href="/surveyQuestionLists/delete /<%= surveyQuestionList[i]._id %> /">Delete</a>
+        </td>
+      </tr>
+    <% } %>
+</table>

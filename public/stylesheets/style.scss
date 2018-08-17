@@ -1,0 +1,26 @@
+// (2) Set a background colour variable equal to #ecf0f1
+
+$background: #ecf0f1;
+$color: #2c3e50l
+body
+{
+  background-color: $background;
+}
+// (2) Set a colour variable equal to #2c3e50
+body{
+  color: $color;
+}
+// (1) Make the body background equal to the background colour variable
+
+// (1) Make the body text equal to the colour variable 
+
+// (5) USING NESTED SELECTORS select the body > table > tbody > tr and colour the rows #f1c40f
+body > table > tbody > tr
+{
+  color: #f1c40f;
+}
+// (4) Select the Jumbotron in the header and colour the background #e67e22 and the text #ffffff
+Jumbotron{
+  background-color: #e67e22;
+  color: #ffffff;
+}
