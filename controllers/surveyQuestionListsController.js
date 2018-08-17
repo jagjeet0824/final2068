@@ -3,14 +3,14 @@ var SurveyQuestionList = require( '../models/surveyQuestionList' )
 
 var SurveyAnswer = require( '../models/surveyAnswer' )
 
-exports.Surveys/* (1) What is our action? */ = (req, res, next /* (1) What 3 parameters are missing? */ ) => {
+exports.index/* (1) What is our action? */ = (req, res, next /* (1) What 3 parameters are missing? */ ) => {
   let locals = { title: 'Surveys' }
 
   /* (1) What is the model name? */surveyQuestionList.find()
     SurveyQuestionList.find()/* (1) Promise has been fullfilled */( ( surveyQuestionLists ) => {
-    locals.surveys = surveys/* (1) ? */
+    locals.surveys = index/* (1) ? */
 
-    /* (2) Render */res.render( 'SurveyQuestionList/Surveys', /* (1) What are including? */ )
+    /* (2) Render */res.render( 'SurveyQuestionList/index', /* (1) What are including? */ )
   })
   .catch/* (1) An error needs to be caught */( /* (2) Catch the error and output it using the Express default */ )
   ('error', function (err) {
@@ -19,14 +19,14 @@ exports.Surveys/* (1) What is our action? */ = (req, res, next /* (1) What 3 par
   }  );
 }
 
-exports.Survey/* (1) What is our action? */ = ( res, req, next/* (1) What 3 parameters are missing? */ ) => {
+exports.show/* (1) What is our action? */ = ( res, req, next/* (1) What 3 parameters are missing? */ ) => {
   let locals = { title: 'Survey' }
 
   /* (1) What is the model name? */surveyQuestionList.findById( req.params.id )
   SurveyQuestionList.findById/* (1) Promise has been fullfilled */( ( surveyQuestionList ) => {
-    locals.survey = Survey/* (1) ? */
+    locals.survey = show/* (1) ? */
 
-    /* (2) Render */res.render( 'SurveyQuestionList/Survey', /* (1) What are including? */ )
+    /* (2) Render */res.render( 'SurveyQuestionList/show', /* (1) What are including? */ )
   })
   .catch/* (1) An error needs to be caught */( /* (2) Catch the error and output it using the Express default */ )
   ('error', function (err) {
@@ -35,8 +35,8 @@ exports.Survey/* (1) What is our action? */ = ( res, req, next/* (1) What 3 para
   }  );
 }
 
-exports.NewSurvey/* (1) What is our action? */ = (req, res, next /* (1) What 3 parameters are missing? */ ) => {
-  let locals = { title: 'New Survey' }
+exports.new/* (1) What is our action? */ = (req, res, next /* (1) What 3 parameters are missing? */ ) => {
+  let locals = { title: 'new' }
 
   /* (2) Render */res.render( 'SurveyQuestionList/NewSurvey', /* (1) What are including? */ )
 }
