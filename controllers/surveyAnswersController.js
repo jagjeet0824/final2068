@@ -1,7 +1,7 @@
 var SurveyAnswer = require( '../models/surveyAnswer' )
 var SurveyQuestionList = require( '../models/surveyQuestionList' )
 
-exports.SurveyAnswers/* (1) What is our action? */ = ( req, res, next ) => {
+exports.index/* (1) What is our action? */ = ( req, res, next ) => {
 
   let locals = { title: 'Survey Answers' }
 
@@ -36,13 +36,13 @@ exports.Survey/* (1) What is our action? */ = ( req, res, next/* (1) What 3 para
   });
 }
 
-exports.AnswerSurvey/* (1) What is our action? */ =  ( /* (1) What 3 parameters are missing? */ req, res, next) => {
+exports.show/* (1) What is our action? */ =  ( /* (1) What 3 parameters are missing? */ req, res, next) => {
   let locals = { title: 'Answer Survey' }
 
   SurveyQuestionList.findById( req.params.surveyQuestionListID )
   SurveyAnswer.findById/* (1) Promise has been fullfilled */( ( surveyQuestionList ) => {
-    locals.survey = AnswerSurvey/* (1) ? */
-    /* (2) Render */res.render('SurveyAnswer/AnswerSurvey' /* (1) What are we rendering? */ )
+    locals.survey = show/* (1) ? */
+    /* (2) Render */res.render('SurveyAnswer/show' /* (1) What are we rendering? */ )
   })
 }
 
